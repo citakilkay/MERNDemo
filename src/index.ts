@@ -4,9 +4,10 @@ import { connectDB } from './config/db';
 import { routerCompany } from './routes/companyRoutes';
 import { routerUser } from './routes/userRoutes';
 import { errorHandler } from './middleware/errorMiddleware';
+import mongoose from 'mongoose';
 
 const port = process.env.PORT || 5000;
-
+mongoose.set('strictQuery', false);
 connectDB();
 const app = express();
 app.use(express.json());

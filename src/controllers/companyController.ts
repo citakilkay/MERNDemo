@@ -1,21 +1,22 @@
 import { Request, Response } from 'express';
+import asynHandler from 'express-async-handler';
 
-export const getCompanies = (req: Request, res: Response) => {
+export const getCompanies = asynHandler(async (req: Request, res: Response) => {
     res.status(200).json({ message: 'Get Companies' });
-}
+})
 
-export const getCompanyById = (req: Request, res: Response) => {
+export const getCompanyById = asynHandler(async (req: Request, res: Response) => {
     res.status(200).json({ message: 'Get by Id' });
-}
+})
 
-export const updateCompany = (req: Request, res: Response) => {
+export const updateCompany = asynHandler(async (req: Request, res: Response) => {
     res.status(200).json({ message: 'Get cOMPAnies' });
-}
+})
 
-export const deleteCompany = (req: Request, res: Response) => {
+export const deleteCompany = asynHandler(async (req: Request, res: Response) => {
     res.status(200).json({ message: 'Get cOMPAnies' });
-}
+})
 
-export const createCompany = (req: Request, res: Response) => {
+export const createCompany = asynHandler(async (req: Request, res: Response) => {
     res.status(200).json({ message: 'Get cOMPAnies' });
-}
+})
